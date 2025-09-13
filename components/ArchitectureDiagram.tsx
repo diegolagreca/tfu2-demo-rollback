@@ -68,9 +68,9 @@ export const ArchitectureDiagram: React.FC<ArchitectureDiagramProps> = ({ servic
              <div className="col-start-5 row-start-2 h-full flex items-center"><Arrow active={isV2Active} horizontal /></div>
 
             {/* Row 3 */}
-            <div className="col-start-1 row-start-3"><ServiceBox icon={<ServerIcon />} name="Feature Service" version="v1" status={getStatus('feature-service-v1')} isActive={isV1Active} /></div>
+            <div className="col-start-1 row-start-3"><ServiceBox icon={<ServerIcon />} name="Demo Service" version="v1" status={getStatus('feature-service-v1')} isActive={isV1Active} /></div>
             <div className="col-start-3 row-start-3"><ServiceBox icon={<RegistryIcon />} name="Registry" status={getStatus('registry')} /></div>
-            <div className="col-start-5 row-start-3"><ServiceBox icon={<ServerIcon />} name="Feature Service" version="v2" status={getStatus('feature-service-v2')} isActive={isV2Active} /></div>
+            <div className="col-start-5 row-start-3"><ServiceBox icon={<ServerIcon />} name="Demo Service" version="v2" status={getStatus('feature-service-v2')} isActive={isV2Active} /></div>
         </div>
     </div>
   );

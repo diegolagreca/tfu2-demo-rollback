@@ -49,19 +49,19 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({ currentStep, onDeplo
 
   return (
     <div className="bg-gray-800/60 p-6 rounded-lg shadow-lg border border-gray-700/50 h-full">
-      <h2 className="text-2xl font-bold mb-6 border-b border-gray-700 pb-4">Procedimiento de la Demo</h2>
+      <h2 className="text-2xl font-bold mb-6 border-b border-gray-700 pb-4">Demo Interactiva</h2>
       <div className="space-y-8">
         <StepButton 
           stepNumber={1}
-          title="Desplegar Inicial (v1)"
-          description="Inicia la Pasarela API, el Registro, y la v1 estable del Servicio de Funcionalidad."
+          title="Deploy Inicial (v1)"
+          description="Inicia el API Gateway, el Registry, y la v1 estable del Servicio demo."
           onClick={onDeploy}
           disabled={!isDeployEnabled || isProcessing}
         />
         <StepButton
           stepNumber={2}
-          title="Promover Nueva (v2)"
-          description="Inicia la v2 del Servicio de Funcionalidad y actualiza la pasarela para dirigirle el tráfico."
+          title="Promover nueva versión (v2)"
+          description="Inicia la v2 del Servicio demo y actualiza el API Gateway para dirigirle el tráfico."
           onClick={onPromote}
           disabled={!isPromoteEnabled || isProcessing}
         />
@@ -75,7 +75,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({ currentStep, onDeplo
         <StepButton
           stepNumber={4}
           title="Verificar Estado"
-          description="Realiza una llamada de prueba al Servicio de Funcionalidad activo para verificar su versión."
+          description="Realiza una llamada de prueba al Servicio demo activo para verificar su versión."
           onClick={onTest}
           disabled={!isTestEnabled || isProcessing}
         />

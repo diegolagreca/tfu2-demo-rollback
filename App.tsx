@@ -69,7 +69,7 @@ const App: React.FC = () => {
     }, 1000);
     await runWithDelay(() => {
       setConfig({ featureServiceUrl: 'http://feature-v2:4000' });
-      addLog('', 'Configuración de la Pasarela API actualizada para apuntar a v2.');
+      addLog('', 'Configuración de API Gateway actualizado para apuntar a v2.');
     }, 1000);
 
     await runWithDelay(() => {
@@ -92,7 +92,7 @@ const App: React.FC = () => {
     await runWithDelay(() => addLog('./rollback.sh', 'Falla detectada. Iniciando rollback...'), 1500);
     await runWithDelay(() => {
       setConfig({ featureServiceUrl: 'http://feature-v1:4000' });
-      addLog('', 'Configuración de la Pasarela API revertida para apuntar a v1.');
+      addLog('', 'Configuración de API Gateway revertida para apuntar a v1.');
     }, 1000);
     await runWithDelay(() => {
        setServices(prev => prev.map(s => s.id === 'feature-service-v2' ? { ...s, status: 'stopped' } : s));
