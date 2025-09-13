@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    # Use command to override the default CMD in Dockerfile for development purposes
+    # This keeps the container running and allows hot-reloading if you use Vite's dev server.
+    # For this project setup, Nginx serves the build, so we'll stick to the production CMD
+    # and just map ports. If you wanted live reload for dev, you'd run `npm run dev` here
+    # and map the Vite dev server port.
+    command: ["nginx", "-g", "daemon off;"] # Keep Nginx running in foreground
