@@ -25,7 +25,7 @@ export const SystemState: React.FC<SystemStateProps> = ({ services, config }) =>
             <ServiceStatusList services={services} />
           </div>
           <div>
-            <h3 className="text-lg font-semibold mb-3 text-cyan-400">Config. de la Pasarela</h3>
+            <h3 className="text-lg font-semibold mb-3 text-cyan-400">Configuración Gateway</h3>
             <ConfigDisplay config={config} />
           </div>
         </div>
